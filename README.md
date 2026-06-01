@@ -18,9 +18,25 @@ hermes skills install hermes-architecture-diagram
 
 ## Available Skills
 
-| Skill | Description |
-|-------|-------------|
-| **hermes-architecture-diagram** | Auto-generates a verified HTML/SVG architecture diagram of your Hermes Agent install. Discovers your OS, terminal backend, model, and provider — then produces a dark-themed interactive visualization with a Bar Raiser verification gate that ground-truths every claim against your live system. Zero hallucinations. |
+### hermes-architecture-diagram (v2.0.0)
+
+Auto-generates verified architecture visualizations of your Hermes Agent install. Discovers your OS, terminal backend, model, and provider — then produces output in your choice of four formats:
+
+| Format | Output | Best For |
+|--------|--------|----------|
+| **A: SVG/HTML** | Interactive diagram in browser | Documentation, READMEs, quick reference |
+| **B: AI Image** | High-fidelity illustration via image_generate | Presentations, social media, pitch decks |
+| **C: Animated HTML** | GSAP-powered step-by-step walkthrough | Demos, onboarding, live presentations |
+| **D: HyperFrames MP4** | Deterministic video via HeyGen's open-source framework | YouTube, content marketing, investor decks |
+
+Every format includes a **Bar Raiser verification gate** — an AWS-inspired quality check that ground-truths every claim in the output against your live system. Zero hallucinations.
+
+**Features:**
+- Auto-detects OS, terminal backend, model, provider, username
+- Two-zone (local backend) or three-zone (remote backend) topology
+- Supports all backends: local, modal, docker, ssh, singularity, daytona
+- Works on macOS, Linux, Windows/WSL
+- Bundled scripts: `discover-env.sh` and `bar-raiser.sh`
 
 ## About TopofMind.AI
 
